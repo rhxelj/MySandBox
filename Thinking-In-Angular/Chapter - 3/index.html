@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app ="clockApp">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <h1>Clock App</h1>
+        <div ng-controller="TimeCtrl">
+            <p>The current time is: {{timeString}}</p>
+            <button ng-click="updateTime()">Update Time</button>
+        </div>
+        
+ 
+    </body>
+</html>

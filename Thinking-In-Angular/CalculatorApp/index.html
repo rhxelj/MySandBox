@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app ="CalculatorApp">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+        <script src="angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <h1>Calculator App</h1>
+        <div ng-controller="CalcCtrl as Calc">
+            <div class="enlinea">
+                
+                <input class="enlinea" type="text" ng-model="Calc.A" value=""> 
+                <div class="enlinea" >
+                    {{Calc.operation}}
+                </div>
+                <input class="enlinea" type="text" ng-model="Calc.B" value="">
+                <button ng-click="Calc.equal()" >=</button>
+                <p class="enlinea">{{Calc.output}}</p>
+            </div>    
+           
+            <p>OPERATION</p>
+            <button ng-click="Calc.plus()">+</button>
+            <button ng-click="Calc.minus()">-</button>
+            <button ng-click="Calc.times()">*</button>
+            <button ng-click="Calc.div()">/</button>
+        </div>
+        
+ 
+    </body>
+</html>
