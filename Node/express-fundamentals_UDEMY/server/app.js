@@ -11,3 +11,9 @@ app.get('/rogelio',function(req,res){
 app.get('/hola',function(req,res){
     res.send('Otra ruta distinta')
 })
+app.get('*',function(req,res){
+    res.send('Lo sietno RUTA no encontrada!')
+})
+app.post('/pst',function(req,res){
+    res.send('Otra ruta distinta pero con POST')
+})

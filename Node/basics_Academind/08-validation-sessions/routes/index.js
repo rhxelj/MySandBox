@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/submit',function(req, res, next){
   req.check('email','Invalid email address').isEmail();
-  //req.check('password','Password is invalid'.isLength({min:4}).equals(req.body.confirmPassword));
+  req.check('password','Password is invalid'.isLength({min:4}).equals(req.body.confirmPassword));
 
   var errors = req.validationErrors();
   if(errors){
